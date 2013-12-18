@@ -33,7 +33,7 @@ module KnifeSolo
     attr_reader :host, :user, :connection_options
 
     def session
-      @session ||= Net::SSH.start(host, user, connection_options)
+      Net::SSH.start(host, user, connection_options)
     end
 
     def password
